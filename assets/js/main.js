@@ -83,21 +83,28 @@ const sendEmail = (e) => {
     contactMessage.textContent = "Write all the input fields 📩";
   } else {
     // serviceID - templateID - #form - publicKey
-    emailjs.sendForm("service_px3snwj", "template_p4z3nas", "#contact-form", "yb6loj4U7xGHUyX_4").then(
-      () => {
-        // Show message and add color
-        contactMessage.classList.add("color-blue");
-        contactMessage.textContent = "Message sent ✅";
+    emailjs
+      .sendForm(
+        "service_px3snwj",
+        "template_p4z3nas",
+        "#contact-form",
+        "yb6loj4U7xGHUyX_4"
+      )
+      .then(
+        () => {
+          // Show message and add color
+          contactMessage.classList.add("color-blue");
+          contactMessage.textContent = "Message sent ✅";
 
-        // Remove message after three seconds
-        setTimeout(() => {
-          contactMessage.textContent = "";
-        }, 5000);
-      },
-      (error) => {
-        alert("OOPS! SOMETHING HAS FAILED...", error);
-      }
-    );
+          // Remove message after three seconds
+          setTimeout(() => {
+            contactMessage.textContent = "";
+          }, 5000);
+        },
+        (error) => {
+          alert("OOPS! SOMETHING HAS FAILED...", error);
+        }
+      );
 
     // To clear the input field
     contactName.value = "";
@@ -164,6 +171,11 @@ if (selectedTheme) {
   themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](
     iconTheme
   );
+} else {
+  document.body.classList["add"]("dark-theme");
+  themeButton.classList["add"]("ri-sun-line");
+  localStorage.setItem("selected-theme", "dark");
+  localStorage.setItem("selected-icon", "ri-sun-line");
 }
 
 // Activate / deactivate the theme manually with the button
