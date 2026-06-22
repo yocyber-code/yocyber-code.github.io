@@ -6,23 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
     content="Watchara 'Yoshi' Sueasakul — Full Stack Developer & Technical Lead. Architecting enterprise web systems end-to-end." />
-
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="assets/img/favicon.png" sizes="256x256" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yocyber-code.github.io/" />
-  <meta property="og:title" content="Watchara Sueasakul — Full Stack Developer & Technical Lead" />
-  <meta property="og:description" content="Architecting enterprise web systems end-to-end — frontend, backend, and cloud." />
-  <meta property="og:image" content="https://yocyber-code.github.io/assets/img/og.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Watchara Sueasakul — Full Stack Developer & Technical Lead" />
-  <meta name="twitter:description" content="Architecting enterprise web systems end-to-end — frontend, backend, and cloud." />
-  <meta name="twitter:image" content="https://yocyber-code.github.io/assets/img/og.png" />
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
