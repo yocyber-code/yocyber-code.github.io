@@ -4,852 +4,464 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Watchara Sueasakul (Yoshi) — Full Stack Developer & Technical Lead. Enterprise web architecture across frontend, backend, and cloud." />
 
-  <!--=============== FAVICON ===============-->
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 
-  <!--=============== REMIXICONS ===============-->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-  <!--=============== SWIPER CSS ===============-->
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-
-  <!--=============== CSS ===============-->
   <link rel="stylesheet" href="assets/css/styles.css" />
 
-  <title>Watchara Coding</title>
+  <title>Watchara Sueasakul — Full Stack Developer & Tech Lead</title>
 </head>
 
 <body>
-  <!--==================== HEADER ====================-->
+  <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <nav class="nav container">
-      <a href="#" class="nav__logo"> Yoshi </a>
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-mark">&lt;/&gt;</span> Yoshi
+      </a>
 
       <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list grid">
-          <li class="nav__item">
-            <a href="#home" class="nav__link active-link">
-              <i class="ri-home-5-line"></i> Home
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#skills" class="nav__link">
-              <i class="ri-trophy-line"></i> Skills
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#qualification" class="nav__link">
-              <i class="ri-book-open-line"></i> Qualification
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#services" class="nav__link">
-              <i class="ri-briefcase-line"></i> Services
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#projects" class="nav__link">
-              <i class="ri-image-line"></i> Projects
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">
-              <i class="ri-chat-3-line"></i> Contact
-            </a>
-          </li>
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link active-link">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#experience" class="nav__link">Experience</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
-
-        <!-- Close button -->
-        <div class="nav__close" id="nav-close">
-          <i class="ri-close-line"></i>
-        </div>
+        <div class="nav__close" id="nav-close"><i class="ri-close-line"></i></div>
       </div>
 
-      <div class="nav__buttons">
-        <!-- Theme change button -->
-        <i class="ri-moon-line change-theme" id="theme-button"></i>
-
-        <!-- Toggle button -->
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="ri-menu-4-line"></i>
-        </div>
+      <div class="nav__actions">
+        <button class="nav__theme" id="theme-button" aria-label="Toggle theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-4-line"></i></div>
       </div>
     </nav>
   </header>
 
-  <!--==================== MAIN ====================-->
   <main class="main">
-    <!--==================== HOME ====================-->
-    <section class="home section" id="home">
-      <div class="home__container container grid section__border">
-        <div class="home__data grid">
-          <h1 class="home__title">
-            Yoshi <br />
-            <p style="font-size: 2.2rem">Watchara Sueasakul</p>
-            Full Stack Developer <br />
+    <!-- ===== HERO ===== -->
+    <section class="hero section" id="home">
+      <div class="hero__container container">
+        <div class="hero__data reveal">
+          <p class="hero__greeting"><span class="hero__status"></span> Available for select work</p>
+          <h1 class="hero__title">
+            Watchara <span class="grad">Sueasakul</span>
           </h1>
+          <p class="hero__role">Full Stack Developer · Technical Lead</p>
+          <p class="hero__desc">
+            Technical leader with 5+ years of full-stack development and 2+ years leading teams.
+            I architect enterprise web systems end-to-end — frontend, backend, and cloud —
+            for clients in healthcare, retail, automotive, and finance.
+          </p>
 
-          <div class="home__blob grid">
-            <div class="home__perfil">
-              <img src="assets/img/extended-removebg-preview.png" alt="" />
-            </div>
-
-            <img src="assets/img/shape-wawes.svg" alt="" class="home__shape-wawes" />
-            <img src="assets/img/shape-circle.svg" alt="" class="home__shape-circle" />
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">View work <i class="ri-arrow-right-down-line"></i></a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
           </div>
 
-          <ul class="home__social">
-            <a href="https://www.linkedin.com/in/watchara-sueasakul-836573284/" target="_blank"
-              class="home__social-link">
-              <i class="ri-linkedin-box-line"></i>
-            </a>
-
-            <a href="https://github.com/yocyber-code" target="_blank" class="home__social-link">
-              <i class="ri-github-fill"></i>
-            </a>
-          </ul>
-        </div>
-
-        <!--==================== HOME INFO 1 ====================-->
-        <div class="home__info">
-          <div>
-            <h3 class="home__info-title">BIOGRAPHY</h3>
-
-            <p class="home__info-description">
-              Hi, I'm Yoshi, The developer who want to invent something new. Passionate about
-              Engineering, Humanity and Empathy, Phychology and Technology to invent solution that help people.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="home__info-title">CONTACT</h3>
-
-            <p class="home__info-description">
-              Bangkok, Thailand <br /><br />
-              watchara_su@knowlesscrew.studio <br /><br />
-            </p>
-          </div>
-
-          <div>
-            <h3 class="home__info-title">SERVICES</h3>
-
-            <p class="home__info-description">
-              Website <br />
-              Web Application <br />
-              API Service <br />
-              Microservice Architecture <br />
-              Mobile Application <br />
-              IoTs System <br />
-              E-commerce System <br />
-              ERP System <br />
-              CRM System <br />
-              CMS System <br />
-              POS System <br />
-              Payment Gateway Integration <br />
-              Social Media Integration <br />
-              Cloud Service Integration <br />
-              Third-party Service Integration <br />
-              SEO Optimization <br />
-              Responsive Design <br />
-              Cross-browser Compatibility <br />
-              Maintenance and Support <br />
-            </p>
+          <div class="hero__social">
+            <a href="https://github.com/yocyber-code" target="_blank" rel="noopener" aria-label="GitHub"><i
+                class="ri-github-fill"></i></a>
+            <a href="https://www.linkedin.com/in/watchara-sueasakul-836573284/" target="_blank" rel="noopener"
+              aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+            <a href="mailto:yocyberyoshi@gmail.com" aria-label="Email"><i class="ri-mail-fill"></i></a>
           </div>
         </div>
 
-        <!--==================== HOME INFO 2 ====================-->
-        <div class="home__info">
-          <div>
-            <h3 class="home__info-title">YEARS OF EXPERIENCE</h3>
+        <div class="hero__visual reveal">
+          <div class="hero__photo">
+            <img src="assets/img/extended-removebg-preview.png" alt="Watchara Sueasakul" />
+          </div>
+          <div class="hero__badge hero__badge--1"><i class="ri-terminal-box-line"></i> Next.js · NestJS</div>
+          <div class="hero__badge hero__badge--2"><i class="ri-cloud-line"></i> Azure · Docker</div>
+        </div>
+      </div>
 
-            <p class="home__info-number">4+ Years</p>
+      <!-- stats -->
+      <div class="hero__stats container reveal">
+        <div class="stat"><span class="stat__num">5+</span><span class="stat__label">Years experience</span></div>
+        <div class="stat"><span class="stat__num">7</span><span class="stat__label">Companies shipped for</span></div>
+        <div class="stat"><span class="stat__num">20+</span><span class="stat__label">Production systems</span></div>
+        <div class="stat"><span class="stat__num">2+</span><span class="stat__label">Years leading teams</span></div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <p class="section__eyebrow">01 — About</p>
+        <h2 class="section__title">Bridging business and<br /><span class="grad">technical execution</span></h2>
+
+        <div class="about__grid">
+          <div class="about__card about__card--lead reveal">
+            <p>
+              Hi, I'm Yoshi. I build production-grade software and lead the teams that ship it.
+              My path runs from music composition to computer science — structural reasoning
+              and creative problem-solving carry straight into system design.
+            </p>
+            <p>
+              I'm equally comfortable directing cross-functional engineering and writing the code myself,
+              translating requirements into architecture with clarity and precision.
+            </p>
           </div>
 
-          <div>
-            <h3 class="home__info-title">PROJECTS</h3>
-
-            <p class="home__info-number">18+</p>
+          <div class="about__card reveal">
+            <i class="ri-stack-line about__icon"></i>
+            <h3>Architecture-first</h3>
+            <p>System design, API strategy, and data modeling before a line of feature code.</p>
           </div>
 
-          <div>
-            <h3 class="home__info-title">JOB STATUS</h3>
+          <div class="about__card reveal">
+            <i class="ri-team-line about__icon"></i>
+            <h3>Team leadership</h3>
+            <p>Code review, release readiness, and mentoring across frontend, backend, and infra.</p>
+          </div>
 
-            <p class="home__info-description">Start-up Founder</p>
+          <div class="about__card reveal">
+            <i class="ri-shield-check-line about__icon"></i>
+            <h3>Domains delivered</h3>
+            <p>Healthcare, retail, automotive, finance — secure data handling and payment integrations.</p>
+          </div>
+
+          <div class="about__card about__card--founder reveal">
+            <i class="ri-rocket-2-line about__icon"></i>
+            <h3>Co-Founder & Director — KCN Studio</h3>
+            <p>A software studio with four units: Software Engineering, IoT Solutions, Media Studio, and Music
+              Studio.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!--==================== SKILLS ====================-->
+    <!-- ===== SKILLS ===== -->
     <section class="skills section" id="skills">
-      <h2 class="section__title">Skills</h2>
-      <span class="section__subtitle">Tech stacks</span>
+      <div class="container">
+        <p class="section__eyebrow">02 — Skills</p>
+        <h2 class="section__title">The <span class="grad">stack</span> I build with</h2>
 
-      <div class="skills__container container grid section__border">
-        <!--==================== SKILLS 1 ====================-->
-        <div class="skills__content">
-          <h3 class="skills__title">
-            <i class="ri-pages-line"></i> Frontend Stacks
-          </h3>
-
-          <div class="skills__info">
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/angular-icon-1.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Angular</h3>
-              <span class="skills__subtitle">Advanced</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/react-2.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">React</h3>
-              <span class="skills__subtitle">Advanced</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/next-js.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Next Js</h3>
-              <span class="skills__subtitle">Advanced</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/vue-9.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Vue</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/nuxt-2.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Nuxt</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/flutter-logo.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">React Native</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/tailwind-css-2.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Tailwind</h3>
-              <span class="skills__subtitle">Advanced</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/bootstrap-5-1.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Bootstrap</h3>
-              <span class="skills__subtitle">Advanced</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/flutter-logo.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Flutter</h3>
-              <span class="skills__subtitle">Basic</span>
+        <div class="skills__grid">
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-star-line"></i> Primary stack</h3>
+            <div class="chips">
+              <span class="chip"><img src="assets/img/next-js.svg" alt="" />Next.js</span>
+              <span class="chip"><img src="assets/img/react-2.svg" alt="" />React</span>
+              <span class="chip"><img src="assets/img/nestjs.svg" alt="" />NestJS</span>
+              <span class="chip"><img src="assets/img/typescript.svg" alt="" />TypeScript</span>
+              <span class="chip"><img src="assets/img/postgresql.svg" alt="" />PostgreSQL</span>
+              <span class="chip"><i class="ri-database-2-line"></i>Prisma</span>
+              <span class="chip"><img src="assets/img/redis.svg" alt="" />Redis</span>
+              <span class="chip"><i class="ri-stack-line"></i>BullMQ</span>
             </div>
           </div>
-        </div>
 
-        <!--==================== SKILLS 2 ====================-->
-        <div class="skills__content">
-          <h3 class="skills__title">
-            <i class="ri-code-fill"></i> Backend Stacks
-          </h3>
-
-          <div class="skills__info">
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/nodejs-1.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Node.js</h3>
-              <span class="skills__subtitle">Advance</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/nestjs.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">NestJS</h3>
-              <span class="skills__subtitle">Advance</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/net_core.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">C# .NET Core</h3>
-              <span class="skills__subtitle">Advance</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/gin.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Gin (Go)</h3>
-              <span class="skills__subtitle">Basic</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/postgresql.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">PostgreSQL</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/mysql-logo.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">My SQL</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/mongodb-icon-1.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">MongoDB</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/mongodb-icon-1.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Entity Framework Core</h3>
-              <span class="skills__subtitle">Advance</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/net_core.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">TypeOrm</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/redis.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Redis</h3>
-              <span class="skills__subtitle">Basic</span>
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-pages-line"></i> Frontend</h3>
+            <div class="chips">
+              <span class="chip"><img src="assets/img/angular-icon-1.svg" alt="" />Angular</span>
+              <span class="chip"><img src="assets/img/vue-9.svg" alt="" />Vue.js</span>
+              <span class="chip"><img src="assets/img/nuxt-2.svg" alt="" />Nuxt</span>
+              <span class="chip"><img src="assets/img/tailwind-css-2.svg" alt="" />Tailwind</span>
+              <span class="chip"><img src="assets/img/bootstrap-5-1.svg" alt="" />Bootstrap</span>
             </div>
           </div>
-        </div>
 
-        <!--==================== SKILLS 3 ====================-->
-        <div class="skills__content">
-          <h3 class="skills__title">
-            <i class="ri-braces-fill"></i> Programming Language
-          </h3>
-
-          <div class="skills__info">
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/logo-javascript.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">JavaScript</h3>
-              <span class="skills__subtitle">Advance</span>
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-code-s-slash-line"></i> Backend</h3>
+            <div class="chips">
+              <span class="chip"><img src="assets/img/nodejs-1.svg" alt="" />Node.js</span>
+              <span class="chip"><img src="assets/img/net_core.svg" alt="" />.NET / C#</span>
+              <span class="chip"><img src="assets/img/python-5.svg" alt="" />Django</span>
+              <span class="chip"><img src="assets/img/go-8.svg" alt="" />Go</span>
             </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/typescript.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Typescript</h3>
-              <span class="skills__subtitle">Advance</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/c--4.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">C#</h3>
-              <span class="skills__subtitle">Advance</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/php-1.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">PHP</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/java-4.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Java</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/python-5.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Python</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/go-8.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Go</h3>
-              <span class="skills__subtitle">Basic</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/dart.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Dart</h3>
-              <span class="skills__subtitle">Basic</span>
-            </div>
-
-
           </div>
-        </div>
 
-        <!--==================== SKILLS 4 ====================-->
-        <div class="skills__content">
-          <h3 class="skills__title">
-            <i class="ri-terminal-fill"></i> Other Stacks
-          </h3>
-
-          <div class="skills__info">
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/git-icon.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Git</h3>
-              <span class="skills__subtitle">Intermediate</span>
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-braces-line"></i> Languages</h3>
+            <div class="chips">
+              <span class="chip"><img src="assets/img/typescript.svg" alt="" />TypeScript</span>
+              <span class="chip"><img src="assets/img/logo-javascript.svg" alt="" />JavaScript</span>
+              <span class="chip"><img src="assets/img/c--4.svg" alt="" />C#</span>
+              <span class="chip"><img src="assets/img/python-5.svg" alt="" />Python</span>
+              <span class="chip"><img src="assets/img/java-4.svg" alt="" />Java</span>
+              <span class="chip"><img src="assets/img/go-8.svg" alt="" />Go</span>
             </div>
+          </div>
 
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/docker-4.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Docker</h3>
-              <span class="skills__subtitle">Basic</span>
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-database-2-line"></i> Data</h3>
+            <div class="chips">
+              <span class="chip"><img src="assets/img/postgresql.svg" alt="" />PostgreSQL</span>
+              <span class="chip"><i class="ri-server-line"></i>SQL Server</span>
+              <span class="chip"><img src="assets/img/mysql-logo.svg" alt="" />MySQL</span>
+              <span class="chip"><img src="assets/img/mongodb-icon-1.svg" alt="" />MongoDB</span>
+              <span class="chip"><i class="ri-fire-line"></i>Firebase</span>
             </div>
+          </div>
 
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/swagger.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Swagger</h3>
-              <span class="skills__subtitle">Advance</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/postman.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Postman</h3>
-              <span class="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="assets/img/ubuntu-4.svg" alt="skills image" />
-              </div>
-
-              <h3 class="skills__name">Ubuntu</h3>
-              <span class="skills__subtitle">Basic</span>
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-cloud-line"></i> Cloud & DevOps</h3>
+            <div class="chips">
+              <span class="chip"><i class="ri-microsoft-line"></i>Azure</span>
+              <span class="chip"><img src="assets/img/docker-4.svg" alt="" />Docker</span>
+              <span class="chip"><i class="ri-loop-right-line"></i>Azure DevOps</span>
+              <span class="chip"><i class="ri-git-merge-line"></i>CI/CD</span>
+              <span class="chip"><img src="assets/img/git-icon.svg" alt="" />Git</span>
+              <span class="chip"><img src="assets/img/swagger.svg" alt="" />Swagger</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!--==================== QUALIFICATION ====================-->
-    <section class="qualification section" id="qualification">
-      <h2 class="section__title">Qualification</h2>
-      <span class="section__subtitle">Experience & education</span>
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <p class="section__eyebrow">03 — Experience</p>
+        <h2 class="section__title">Where I've <span class="grad">shipped</span></h2>
 
-      <div class="qualification__container container grid section__border">
-        <!--==================== QUALIFICATION 1 ====================-->
-        <div class="qualification__content">
-          <h3 class="qualification__title">
-            <i class="ri-git-repository-fill"></i> Education
-          </h3>
-
-          <div class="qualification__info">
-            <div class="education_wrap">
-              <div class="education_img">
-                <img src="assets/img/dpu.jpg" alt="university" />
-              </div>
-              <div class="education_content">
-                <h3 class="qualification__name">Master of Artificial Intelligence and Data Engineering</h3>
-                <span class="qualification__country">Dhurakij Pundit University</span>
-                <span class="qualification__year">Aug 2025 - present</span>
-              </div>
+        <div class="timeline">
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Jan 2026 – Apr 2026</span>
+              <h3 class="tl__role">Development Lead</h3>
+              <span class="tl__org">UC Connect Co., Ltd.</span>
+              <p class="tl__desc">Led end-to-end technical delivery across concurrent projects — architecture,
+                scope, and roadmaps. Directed code reviews, release readiness, and API/integration strategy;
+                mentored the team on patterns and code quality.</p>
             </div>
+          </div>
 
-            <div class="education_wrap">
-              <div class="education_img">
-                <img src="assets/img/sau.png" alt="university" />
-              </div>
-              <div class="education_content">
-                <h3 class="qualification__name">Bachelor of Computer Science</h3>
-                <span class="qualification__country">Southeast Asia University</span>
-                <span class="qualification__year">2019 - 2023</span>
-              </div>
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Nov 2024 – Apr 2025</span>
+              <h3 class="tl__role">Senior Full Stack Developer</h3>
+              <span class="tl__org">Codemonday Co., Ltd.</span>
+              <p class="tl__desc">Architected Betagro Farmer Manager (agricultural compensation payments,
+                validation, automated reporting). Led the BDMS Medical Records Request System as Team Lead —
+                digital request &amp; tracking with secure data handling and third-party integrations.</p>
             </div>
+          </div>
 
-            <div class="education_wrap">
-              <div class="education_img">
-                <img src="assets/img/mahidol.svg" alt="university" />
-              </div>
-              <div class="education_content">
-                <h3 class="qualification__name">Bachelor of Music Theory and Composition</h3>
-                <span class="qualification__country">Mahidol University - College of music</span>
-                <span class="qualification__year">2015 - 2018</span>
-              </div>
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Jun 2024 – Oct 2024</span>
+              <h3 class="tl__role">Full Stack Developer</h3>
+              <span class="tl__org">BYD — Rêver Automotive Co., Ltd.</span>
+              <p class="tl__desc">Designed five internal office systems for staff and a national dealer network.
+                Built C# .NET APIs on Azure + SharePoint, Angular/React frontends, and Azure DevOps CI/CD pipelines.</p>
+            </div>
+          </div>
+
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Mar 2023 – May 2024</span>
+              <h3 class="tl__role">Full Stack Developer</h3>
+              <span class="tl__org">Indigy Co., Ltd.</span>
+              <p class="tl__desc">Built the PTT OR Thaideat marketplace with role-based multi-stakeholder workflows,
+                and Phyathai Hospital physician scheduling with real-time SMS gateway integration. Delivered ERP/CRM/HR
+                systems (BSale, TCP Work+, Syslink).</p>
+            </div>
+          </div>
+
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Dec 2022 – Feb 2023</span>
+              <h3 class="tl__role">Software Engineer</h3>
+              <span class="tl__org">Priceza Co., Ltd.</span>
+              <p class="tl__desc">Built the Roojai Insurance web app (React.js + NestJS) for product browsing and
+                policy management. Integrated SCB Payment Gateway with automated payment reconciliation.</p>
+            </div>
+          </div>
+
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Jul 2021 – Nov 2022</span>
+              <h3 class="tl__role">Front End Developer</h3>
+              <span class="tl__org">T-Dev Co., Ltd.</span>
+              <p class="tl__desc">Built responsive interfaces for the Otteri merchandise store and car-wash platform
+                (Angular, Vue.js) with SCB payment flows; designed PostgreSQL schemas with the backend team.</p>
             </div>
           </div>
         </div>
 
-        <!--==================== QUALIFICATION 2 ====================-->
-        <div class="qualification__content">
-          <h3 class="qualification__title">
-            <i class="ri-building-fill"></i> Work
-          </h3>
-
-          <div class="qualification__info">
-            <div>
-              <h3 class="qualification__name">Founder/Director</h3>
-              <span class="qualification__country">Knowless Crew Nexus Studio Co., Ltd.</span>
-              <span class="qualification__year">2025 - Present</span>
+        <!-- education -->
+        <div class="edu">
+          <h3 class="edu__heading"><i class="ri-graduation-cap-line"></i> Education</h3>
+          <div class="edu__grid">
+            <div class="edu__item reveal">
+              <img src="assets/img/dpu.jpg" alt="Dhurakij Pundit University" />
+              <div>
+                <h4>M.Sc. Artificial Intelligence &amp; Data Engineering</h4>
+                <span>Dhurakij Pundit University · Aug 2025 – Present</span>
+              </div>
             </div>
-
-            <div>
-              <h3 class="qualification__name">Full Stack and IoTs Developer</h3>
-              <span class="qualification__country">Suanphiangrada Co., Ltd.</span>
-              <span class="qualification__year">2025 (Co-Project)</span>
+            <div class="edu__item reveal">
+              <img src="assets/img/sau.png" alt="Southeast Asia University" />
+              <div>
+                <h4>B.Sc. Computer Science</h4>
+                <span>Southeast Asia University · 2019 – 2024</span>
+              </div>
             </div>
-
-            <div>
-              <h3 class="qualification__name">Senior Full Stack Developer</h3>
-              <span class="qualification__country">Codemonday Co., Ltd.</span>
-              <span class="qualification__year">2024 - 2025</span>
-            </div>
-
-            <div>
-              <h3 class="qualification__name">Full Stack Developer</h3>
-              <span class="qualification__country">BYD - Rêver Automotive Co., Ltd.</span>
-              <span class="qualification__year">2024</span>
-            </div>
-
-            <div>
-              <h3 class="qualification__name">Full Stack Developer</h3>
-              <span class="qualification__country">Indigy Co., Ltd.</span>
-              <span class="qualification__year">2023-2024</span>
-            </div>
-
-            <div>
-              <h3 class="qualification__name">Software Engineer</h3>
-              <span class="qualification__country">Priceza Co., Ltd.</span>
-              <span class="qualification__year">2022</span>
-            </div>
-
-            <div>
-              <h3 class="qualification__name">Frontend Developer</h3>
-              <span class="qualification__country">T-DEV Co., Ltd.</span>
-              <span class="qualification__year">2021-2022</span>
+            <div class="edu__item reveal">
+              <img src="assets/img/mahidol.svg" alt="Mahidol University" />
+              <div>
+                <h4>B.A. Music Composition</h4>
+                <span>College of Music, Mahidol University · 2015 – 2018</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <img src="assets/img/shape-circle.svg" alt="qualification image" class="qualification__img" />
     </section>
 
-    <!--==================== SERVICES ====================-->
-    <section class="services section" id="services">
-      <h2 class="section__title">Services</h2>
-      <span class="section__subtitle"></span>
-
-      <div class="services__container container grid section__border">
-        <div class="services__card">
-          <i class="ri-window-fill"></i>
-
-          <h2 class="services__title">Website</h2>
-
-          <p class="services__description">
-            Website for your business, company or personal, with the best
-            quality for your needs.
-          </p>
-          <div class="services__border"></div>
-        </div>
-
-        <div class="services__card">
-          <i class="ri-code-s-slash-line"></i>
-
-          <h2 class="services__title">Web application</h2>
-
-          <p class="services__description">
-            Web application for your business or company. With best
-            functional, secure and compatible with your business that can
-            reach users on all devices.
-          </p>
-          <div class="services__border"></div>
-        </div>
-
-        <div class="services__card">
-          <i class="ri-settings-5-fill"></i>
-
-          <h2 class="services__title">API Service</h2>
-
-          <p class="services__description">
-            API for your system that secure and compatible with your system.
-          </p>
-          <div class="services__border"></div>
-        </div>
-      </div>
-    </section>
-
-    <!--==================== PROJECTS ====================-->
+    <!-- ===== PROJECTS ===== -->
     <section class="projects section" id="projects">
-      <h2 class="section__title">Projects</h2>
-      <span class="section__subtitle">Just some work</span>
+      <div class="container">
+        <p class="section__eyebrow">04 — Projects</p>
+        <h2 class="section__title">Selected <span class="grad">work</span></h2>
 
-      <div class="container section__border">
-        <div class="projects__container swiper">
-          <div class="swiper-wrapper">
-            <!--==================== PROJECT 1 ====================-->
-            <div class="projects__content swiper-slide">
-              <img src="assets/img/otteri.png" alt="projects image" class="projects__img" />
-
-              <div>
-                <h1 class="projects__title">Otteri Website</h1>
-                <div class="projects__subtitle">Next JS / React</div>
-                <a href="https://www.otteriwashdry.com/" class="projects__button">
-                  View <i class="ri-arrow-right-line"></i>
-                </a>
-              </div>
+        <div class="projects__grid">
+          <article class="proj reveal">
+            <div class="proj__media"><img src="assets/img/otteri.png" alt="Otteri Website" /></div>
+            <div class="proj__body">
+              <h3 class="proj__title">Otteri Website</h3>
+              <p class="proj__desc">Laundry &amp; car-wash brand site with store locator and service booking.</p>
+              <div class="proj__tags"><span>Next.js</span><span>React</span></div>
+              <a href="https://www.otteriwashdry.com/" target="_blank" rel="noopener" class="proj__link">Visit <i
+                  class="ri-arrow-right-up-line"></i></a>
             </div>
+          </article>
 
-            <!--==================== PROJECT 2 ====================-->
-            <div class="projects__content swiper-slide">
-              <img src="assets/img/otteri-shop.png" alt="projects image" class="projects__img" />
-
-              <div>
-                <h1 class="projects__title">Otteri Shop</h1>
-                <div class="projects__subtitle">Nuxt / Vue</div>
-                <a href="https://shop.otteri.app/" class="projects__button">
-                  View <i class="ri-arrow-right-line"></i>
-                </a>
-              </div>
+          <article class="proj reveal">
+            <div class="proj__media"><img src="assets/img/otteri-shop.png" alt="Otteri Shop" /></div>
+            <div class="proj__body">
+              <h3 class="proj__title">Otteri Shop</h3>
+              <p class="proj__desc">E-commerce storefront for merchandise with cart and payment flow.</p>
+              <div class="proj__tags"><span>Nuxt</span><span>Vue</span></div>
+              <a href="https://shop.otteri.app/" target="_blank" rel="noopener" class="proj__link">Visit <i
+                  class="ri-arrow-right-up-line"></i></a>
             </div>
+          </article>
 
-            <!--==================== PROJECT 3 ====================-->
-            <div class="projects__content swiper-slide">
-              <img class="projects__img" src="assets/img/ida.png" alt="projects image" />
-
-              <div>
-                <h1 class="projects__title">IDA - Integrated Doctor App</h1>
-                <div class="projects__subtitle" style="margin-bottom: 0px">
-                  For Phyathai Hospitals Group
-                </div>
-                <div class="projects__subtitle">Angular</div>
-              </div>
+          <article class="proj reveal">
+            <div class="proj__media"><img src="assets/img/ida.png" alt="IDA Integrated Doctor App" /></div>
+            <div class="proj__body">
+              <h3 class="proj__title">IDA — Integrated Doctor App</h3>
+              <p class="proj__desc">Physician scheduling &amp; patient communications for Phyathai Hospitals Group.</p>
+              <div class="proj__tags"><span>Angular</span><span>SMS Gateway</span></div>
             </div>
+          </article>
 
-            <!--==================== PROJECT 4 ====================-->
-            <div class="projects__content swiper-slide">
-              <img src="assets/img/workplus.png" alt="projects image" class="projects__img" />
-              <div>
-                <h1 class="projects__title">Work+</h1>
-                <div class="projects__subtitle">Angular</div>
-                <a href="https://workplus.one/" class="projects__button">
-                  View <i class="ri-arrow-right-line"></i>
-                </a>
-              </div>
+          <article class="proj reveal">
+            <div class="proj__media"><img src="assets/img/workplus.png" alt="Work+" /></div>
+            <div class="proj__body">
+              <h3 class="proj__title">Work+</h3>
+              <p class="proj__desc">Enterprise HR &amp; workforce platform with real-time dashboards.</p>
+              <div class="proj__tags"><span>Angular</span></div>
+              <a href="https://workplus.one/" target="_blank" rel="noopener" class="proj__link">Visit <i
+                  class="ri-arrow-right-up-line"></i></a>
             </div>
-          </div>
+          </article>
 
-          <!-- Swiper arrows -->
-          <div class="swiper-button-next">
-            <i class="ri-arrow-right-s-line"></i>
-          </div>
+          <article class="proj proj--text reveal">
+            <div class="proj__body">
+              <span class="proj__badge">SaaS · In progress</span>
+              <h3 class="proj__title">Serious Gamer Operating Platform</h3>
+              <p class="proj__desc">Thailand-first SaaS for competitive gaming communities. Modular monolith
+                (NestJS · Next.js · PostgreSQL · Redis · BullMQ), PDPA-aware data classification, four-role RBAC,
+                preset-first schemas for MOBA/FPS/RPG.</p>
+              <div class="proj__tags"><span>NestJS</span><span>Next.js</span><span>PostgreSQL</span></div>
+            </div>
+          </article>
 
-          <div class="swiper-button-prev">
-            <i class="ri-arrow-left-s-line"></i>
-          </div>
-
-          <!-- Swiper pagination -->
-          <div class="swiper-pagination"></div>
+          <article class="proj proj--text reveal">
+            <div class="proj__body">
+              <span class="proj__badge">Automation · In progress</span>
+              <h3 class="proj__title">Agent Yusha / Yusha Bud</h3>
+              <p class="proj__desc">Discord-native companion bot with workflow automation, part of the broader
+                Yusha automation ecosystem.</p>
+              <div class="proj__tags"><span>Node.js</span><span>Discord</span><span>Automation</span></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!--==================== CONTACT ====================-->
+    <!-- ===== CONTACT ===== -->
     <section class="contact section" id="contact">
-      <h2 class="section__title">Contact Me</h2>
-      <span class="section__subtitle"></span>
+      <div class="container contact__inner reveal">
+        <p class="section__eyebrow">05 — Contact</p>
+        <h2 class="section__title">Let's build something<br /><span class="grad">that helps people</span></h2>
+        <p class="contact__desc">Open to leadership roles, architecture work, and serious collaborations.
+          The fastest way to reach me is email.</p>
 
-      <div class="contact__container container grid section__border">
-        <div class="contact__content">
-          <h3 class="contact__title">
-            <i class="ri-chat-3-line"></i> contract
-          </h3>
-
-          <div class="contact__info">
-            <div class="contact__data">
-              <span class="contact__data-title"><i class="ri-mail-line" style="margin-right: 4px"></i>Email</span>
-              <span class="contact__data-info">watchara_su@knowlesscrew.studio</span>
-            </div>
-
+        <div class="contact__links">
+          <a href="mailto:yocyberyoshi@gmail.com" class="contact__card">
+            <i class="ri-mail-line"></i>
+            <span class="contact__k">Email</span>
+            <span class="contact__v">yocyberyoshi@gmail.com</span>
+          </a>
+          <a href="https://github.com/yocyber-code" target="_blank" rel="noopener" class="contact__card">
+            <i class="ri-github-line"></i>
+            <span class="contact__k">GitHub</span>
+            <span class="contact__v">@yocyber-code</span>
+          </a>
+          <a href="https://www.linkedin.com/in/watchara-sueasakul-836573284/" target="_blank" rel="noopener"
+            class="contact__card">
+            <i class="ri-linkedin-box-line"></i>
+            <span class="contact__k">LinkedIn</span>
+            <span class="contact__v">Watchara Sueasakul</span>
+          </a>
+          <div class="contact__card contact__card--static">
+            <i class="ri-map-pin-line"></i>
+            <span class="contact__k">Based in</span>
+            <span class="contact__v">Bangkok, Thailand</span>
           </div>
-        </div>
-
-        <div class="contact__content">
-          <h3 class="contact__title">
-            <i class="ri-send-plane-line"></i> Let's me solve your problem.
-          </h3>
-
-          <form action="" class="contact__form" id="contact-form">
-            <div class="contact__form-div">
-              <label class="contact__form-tag">Names</label>
-              <input type="text" name="user_name" required placeholder="Write your names" class="contact__form-input"
-                id="contact-name" />
-            </div>
-
-            <div class="contact__form-div">
-              <label class="contact__form-tag">Mail</label>
-              <input type="email" name="user_email" required placeholder="Write your email" class="contact__form-input"
-                id="contact-email" />
-            </div>
-
-            <div class="contact__form-div contact__form-area">
-              <label class="contact__form-tag">Details</label>
-              <textarea name="user_project" placeholder="Write your details" class="contact__form-input"
-                id="contact-project"></textarea>
-            </div>
-
-            <p class="contact__message" id="contact-message"></p>
-
-            <button type="submit" style="
-                  border: 2px solid #757575;
-                  border-radius: 12px;
-                  padding: 4px 14px;
-                " class="contact__button">
-              Send <i class="ri-mail-send-line"></i>
-            </button>
-          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!--==================== FOOTER ====================-->
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="footer__container container">
-      <h1 class="footer__title">Watchara Sueasakul</h1>
-      <p>Full Stack Developer</p>
-
-      <ul class="footer__list">
-        <li>
-          <a href="#home" class="footer__link">Home</a>
-        </li>
-        <li>
-          <a href="#skills" class="footer__link">Skills</a>
-        </li>
-        <li>
-          <a href="#projects" class="footer__link">Projects</a>
-        </li>
+    <div class="container footer__inner">
+      <div>
+        <a href="#home" class="nav__logo"><span class="nav__logo-mark">&lt;/&gt;</span> Yoshi</a>
+        <p class="footer__tag">Full Stack Developer · Technical Lead</p>
+      </div>
+      <ul class="footer__nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
       </ul>
-
-      <ul class="footer__social">
-        <a href="https://www.linkedin.com/in/watchara-sueasakul-836573284/" target="_blank" class="footer__social-link">
-          <i class="ri-linkedin-box-line"></i>
-        </a>
-
-        <a href="https://github.com/yocyber-code" target="_blank" class="footer__social-link">
-          <i class="ri-github-line"></i>
-        </a>
-      </ul>
-
-      <span class="footer__copy">
-        &#169; Copyright yocyber-code. All rights reserved
-      </span>
+      <span class="footer__copy">© 2026 Watchara Sueasakul</span>
     </div>
   </footer>
 
-  <!--========== SCROLL UP ==========-->
-  <a href="#" class="scrollup" id="scroll-up">
-    <i class="ri-arrow-up-line"></i>
-  </a>
+  <a href="#home" class="scrollup" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
 
-  <!--=============== SCROLLREVEAL ===============-->
-  <script src="assets/js/scrollreveal.min.js"></script>
-
-  <!--=============== SWIPER JS ===============-->
-  <script src="assets/js/swiper-bundle.min.js"></script>
-
-  <!--=============== EMAIL JS ===============-->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-  <!--=============== MAIN JS ===============-->
   <script src="assets/js/main.js"></script>
 </body>
 
