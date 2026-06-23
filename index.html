@@ -2,470 +2,467 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Watchara 'Yoshi' Sueasakul — Full Stack Developer & Technical Lead. Architecting enterprise web systems end-to-end." />
+    content="Watchara Sueasakul (Yoshi) — Full Stack Developer & Technical Lead. Enterprise web architecture across frontend, backend, and cloud." />
 
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="assets/img/favicon.png" sizes="256x256" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yocyber-code.github.io/" />
-  <meta property="og:title" content="Watchara Sueasakul — Full Stack Developer & Technical Lead" />
-  <meta property="og:description" content="Architecting enterprise web systems end-to-end — frontend, backend, and cloud." />
-  <meta property="og:image" content="https://yocyber-code.github.io/assets/img/og.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Watchara Sueasakul — Full Stack Developer & Technical Lead" />
-  <meta name="twitter:description" content="Architecting enterprise web systems end-to-end — frontend, backend, and cloud." />
-  <meta name="twitter:image" content="https://yocyber-code.github.io/assets/img/og.png" />
-
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
 
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
   <title>Watchara Sueasakul — Full Stack Developer & Tech Lead</title>
-
-  <style>
-    :root {
-      --bg: #1a1c1e;
-      --bg-marquee: #1c1e21;
-      --bg-contact: #161719;
-      --card: #212427;
-      --border: #34383d;
-      --text: #e8e9ea;
-      --muted: #9ba0a6;
-      --gold: #c8a16a;
-      --gold-hi: #d6b27e;
-      --exp-hover: #1e2123;
-      --mono: 'Space Mono', monospace;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Archivo', sans-serif;
-      min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { text-decoration: none; }
-    ::selection { background: rgba(200, 161, 106, .26); color: var(--text); }
-
-    .wrap { max-width: 1280px; margin: 0 auto; }
-    .mono { font-family: var(--mono); }
-
-    /* reveal */
-    [data-reveal] { opacity: 0; transform: translateY(28px); }
-    [data-reveal].in {
-      opacity: 1; transform: translateY(0);
-      transition: opacity .8s cubic-bezier(.22, .61, .36, 1), transform .8s cubic-bezier(.22, .61, .36, 1);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      [data-reveal] { opacity: 1; transform: none; }
-      html { scroll-behavior: auto; }
-    }
-
-    /* nav */
-    nav.bar {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(26, 28, 30, .82);
-      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner { padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .logo { color: var(--text); font-weight: 800; font-size: 18px; letter-spacing: -.02em; display: flex; align-items: center; gap: 9px; }
-    .logo .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); display: inline-block; }
-    .navlinks { display: flex; align-items: center; gap: 30px; }
-    .navlink {
-      font-family: var(--mono); font-weight: 600; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
-      padding-bottom: 5px; border-bottom: 1.5px solid transparent; color: var(--muted);
-      transition: color .18s, border-color .18s;
-    }
-    .navlink:hover { color: var(--text); }
-    .navlink.active { color: var(--text); border-bottom-color: var(--gold); }
-    .nav-email { color: var(--muted); font-family: var(--mono); font-size: 13px; letter-spacing: .04em; transition: color .18s; }
-    .nav-email:hover { color: var(--gold); }
-
-    /* hero */
-    header.hero { padding: 96px 32px 64px; }
-    .hero-meta { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 16px; margin-bottom: 48px; }
-    .hero-meta span { font-family: var(--mono); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-    .hero-h {
-      margin: 0; font-weight: 900; line-height: .9; letter-spacing: -.035em; text-transform: uppercase;
-      font-size: clamp(48px, 9vw, 148px); color: var(--text);
-    }
-    .hero-bottom { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 40px; margin-top: 48px; }
-    .hero-lead { margin: 0 0 28px; font-size: 21px; line-height: 1.45; color: var(--muted); }
-    .pill {
-      display: inline-flex; align-items: center; gap: 9px; padding: 9px 16px;
-      border: 1px solid var(--border); border-radius: 999px; background: var(--card);
-    }
-    .pill .pdot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); animation: kc-pulse 2.4s ease-in-out infinite; }
-    .pill span.lbl { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--text); }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-ghost {
-      display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px;
-      border: 1px solid var(--border); background: var(--card); color: var(--text); font-weight: 600; font-size: 15px;
-      transition: border-color .18s, color .18s, transform .18s;
-    }
-    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
-    .btn-text { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; border: 1px solid transparent; color: var(--muted); font-weight: 600; font-size: 15px; transition: color .18s; }
-    .btn-text:hover { color: var(--gold); }
-
-    @keyframes kc-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .4; transform: scale(.8); } }
-    @keyframes kc-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-    /* marquee */
-    .marquee { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 26px 0; overflow: hidden; background: var(--bg-marquee); }
-    .marquee-track { display: inline-flex; width: max-content; animation: kc-marquee 34s linear infinite; }
-    .marquee:hover .marquee-track { animation-play-state: paused; }
-    .marquee-row { display: inline-flex; align-items: center; }
-    .marquee-row .tech { font-weight: 600; font-size: 22px; letter-spacing: -.01em; color: var(--text); white-space: nowrap; }
-    .marquee-row .sep { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin: 0 28px; }
-
-    /* sections */
-    section .pad { padding: 104px 32px; }
-    .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
-    .sec-head { border-top: 1px solid var(--border); padding-top: 34px; }
-    .sec-h2 { margin: 0; font-weight: 900; font-size: clamp(32px, 5vw, 64px); letter-spacing: -.03em; text-transform: uppercase; color: var(--text); }
-
-    /* about + stats */
-    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px; align-items: start; }
-    .about-lead { margin: 22px 0 0; font-size: clamp(22px, 2.6vw, 32px); line-height: 1.4; letter-spacing: -.01em; color: var(--text); font-weight: 500; }
-    .about-sub { margin: 26px 0 0; font-size: 17px; line-height: 1.6; color: var(--muted); }
-    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; }
-    .stat { background: var(--bg); padding: 34px 28px; }
-    .stat .num { font-weight: 900; font-size: clamp(38px, 4.4vw, 56px); letter-spacing: -.03em; color: var(--text); line-height: 1; }
-    .stat .lbl { margin-top: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-
-    /* services */
-    .pad-x { padding: 0 32px 104px; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; }
-    .service { background: var(--bg); padding: 32px 28px 40px; transition: background .18s; }
-    .service:hover { background: var(--card); }
-    .service .num { font-family: var(--mono); font-size: 13px; color: var(--gold); }
-    .service h3 { margin: 26px 0 14px; font-size: 20px; font-weight: 700; letter-spacing: -.01em; color: var(--text); }
-    .service p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
-
-    /* projects */
-    .proj-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; margin-bottom: 44px; }
-    .proj-head .count { font-family: var(--mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 28px; }
-    .proj { display: block; }
-    .proj-media { position: relative; overflow: hidden; border-radius: 16px; border: 1px solid var(--border); aspect-ratio: 4/3; }
-    .proj-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transition: transform .65s cubic-bezier(.22, .61, .36, 1); }
-    .proj:hover .proj-bg { transform: scale(1.06); }
-    .proj-mono { font-weight: 900; font-size: clamp(52px, 7vw, 86px); letter-spacing: -.04em; color: rgba(232, 233, 234, .07); text-transform: uppercase; }
-    .proj-tech {
-      position: absolute; left: 18px; bottom: 18px; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
-      color: var(--muted); background: rgba(26, 28, 30, .6); border: 1px solid var(--border); padding: 6px 11px; border-radius: 999px;
-      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-    }
-    .proj-arrow {
-      position: absolute; top: 16px; right: 16px; width: 42px; height: 42px; border-radius: 50%; background: var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; transform: translate(8px, -8px);
-      transition: opacity .4s ease, transform .4s cubic-bezier(.22, .61, .36, 1);
-    }
-    .proj:hover .proj-arrow { opacity: 1; transform: translate(0, 0); }
-    .proj-info { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 18px; }
-    .proj-info h3 { margin: 0; font-size: 21px; font-weight: 700; letter-spacing: -.01em; color: var(--text); transition: color .18s; }
-    .proj:hover .proj-info h3 { color: var(--gold); }
-    .proj-info .year { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
-    .proj-desc { margin: 8px 0 0; font-size: 15px; line-height: 1.5; color: var(--muted); }
-
-    /* experience */
-    .exp-row {
-      display: grid; grid-template-columns: 1.4fr 1.2fr auto; gap: 24px; align-items: center;
-      padding: 26px 8px; border-bottom: 1px solid var(--border); border-radius: 10px;
-      transition: padding-left .22s, background .22s;
-    }
-    .exp-row:hover { padding-left: 20px; background: var(--exp-hover); }
-    .exp-company { font-size: clamp(20px, 2.4vw, 26px); font-weight: 700; letter-spacing: -.01em; color: var(--text); }
-    .exp-role { font-size: 15px; color: var(--muted); }
-    .exp-year { font-family: var(--mono); font-size: 14px; letter-spacing: .04em; color: var(--gold); text-align: right; }
-
-    /* contact */
-    .contact { border-top: 1px solid var(--border); background: var(--bg-contact); }
-    .contact .pad { padding: 112px 32px; }
-    .contact h2 {
-      margin: 0; max-width: 14ch; font-weight: 900; font-size: clamp(40px, 7vw, 104px); line-height: .95;
-      letter-spacing: -.035em; text-transform: uppercase; color: var(--text);
-    }
-    .contact-cta { margin-top: 48px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-    .btn-gold {
-      display: inline-flex; align-items: center; gap: 12px; padding: 18px 32px; border-radius: 999px;
-      background: var(--gold); color: var(--bg); font-weight: 700; font-size: 17px;
-      transition: transform .18s, background .18s;
-    }
-    .btn-gold:hover { transform: translateY(-2px); background: var(--gold-hi); }
-    .contact-foot { margin-top: 80px; padding-top: 32px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-    .contact-foot .copy { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-    .contact-foot .socials { display: flex; gap: 28px; }
-    .contact-foot .socials a { font-family: var(--mono); font-size: 13px; letter-spacing: .06em; color: var(--muted); transition: color .18s; }
-    .contact-foot .socials a:hover { color: var(--gold); }
-
-    @media (max-width: 780px) { .navlinks { display: none; } }
-  </style>
 </head>
 
 <body>
-  <!-- NAV -->
-  <nav class="bar">
-    <div class="wrap nav-inner">
-      <a href="#top" class="logo"><span class="dot"></span>Yoshi</a>
-      <div class="navlinks">
-        <a href="#work" class="navlink" data-nav="work">Work</a>
-        <a href="#projects" class="navlink" data-nav="projects">Projects</a>
-        <a href="#experience" class="navlink" data-nav="experience">Experience</a>
-        <a href="#contact" class="navlink" data-nav="contact">Contact</a>
-      </div>
-      <a href="mailto:watchara_su@knowlesscrew.co.th" class="nav-email">watchara_su@knowlesscrew.co.th</a>
-    </div>
-  </nav>
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-mark">&lt;/&gt;</span> Yoshi
+      </a>
 
-  <!-- HERO -->
-  <header id="top" class="wrap hero">
-    <div class="hero-meta" data-reveal>
-      <span>© 2026 — Bangkok</span>
-      <span>Software Engineer · Tech Lead</span>
-    </div>
-
-    <h1 class="hero-h" data-reveal data-delay="80">Full Stack<br>Developer &amp;<br>Technical Lead</h1>
-
-    <div class="hero-bottom" data-reveal data-delay="180">
-      <div style="max-width:520px;">
-        <p class="hero-lead">Architecting enterprise web systems end-to-end.</p>
-        <div class="pill">
-          <span class="pdot"></span>
-          <span class="lbl">Available for work</span>
-        </div>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link active-link">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#experience" class="nav__link">Experience</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="nav__close" id="nav-close"><i class="ri-close-line"></i></div>
       </div>
-      <div class="hero-actions">
-        <a href="#projects" class="btn-ghost">
-          View work
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-        </a>
-        <a href="mailto:watchara_su@knowlesscrew.co.th" class="btn-text">Email me</a>
+
+      <div class="nav__actions">
+        <button class="nav__theme" id="theme-button" aria-label="Toggle theme">
+          <i class="ri-moon-line"></i>
+        </button>
+        <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-4-line"></i></div>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <!-- MARQUEE -->
-  <section class="marquee">
-    <div class="marquee-track">
-      <div class="marquee-row">
-        <span class="tech">Next.js</span><span class="sep"></span>
-        <span class="tech">React</span><span class="sep"></span>
-        <span class="tech">NestJS</span><span class="sep"></span>
-        <span class="tech">TypeScript</span><span class="sep"></span>
-        <span class="tech">PostgreSQL</span><span class="sep"></span>
-        <span class="tech">Prisma</span><span class="sep"></span>
-        <span class="tech">Redis</span><span class="sep"></span>
-        <span class="tech">BullMQ</span><span class="sep"></span>
-        <span class="tech">Azure</span><span class="sep"></span>
-        <span class="tech">Docker</span><span class="sep"></span>
-      </div>
-      <div class="marquee-row" aria-hidden="true">
-        <span class="tech">Next.js</span><span class="sep"></span>
-        <span class="tech">React</span><span class="sep"></span>
-        <span class="tech">NestJS</span><span class="sep"></span>
-        <span class="tech">TypeScript</span><span class="sep"></span>
-        <span class="tech">PostgreSQL</span><span class="sep"></span>
-        <span class="tech">Prisma</span><span class="sep"></span>
-        <span class="tech">Redis</span><span class="sep"></span>
-        <span class="tech">BullMQ</span><span class="sep"></span>
-        <span class="tech">Azure</span><span class="sep"></span>
-        <span class="tech">Docker</span><span class="sep"></span>
-      </div>
-    </div>
-  </section>
+  <main class="main">
+    <!-- ===== HERO ===== -->
+    <section class="hero section" id="home">
+      <div class="hero__container container">
+        <div class="hero__data reveal">
+          <p class="hero__greeting"><span class="hero__status"></span> Available for select work</p>
+          <h1 class="hero__title">
+            Watchara <span class="grad">Sueasakul</span>
+          </h1>
+          <p class="hero__role">Full Stack Developer · Technical Lead</p>
+          <p class="hero__desc">
+            Technical leader with 5+ years of full-stack development and 2+ years leading teams.
+            I architect enterprise web systems end-to-end — frontend, backend, and cloud —
+            for clients in healthcare, retail, automotive, and finance.
+          </p>
 
-  <!-- ABOUT + STATS -->
-  <section id="work" class="wrap pad">
-    <div class="about-grid">
-      <div data-reveal>
-        <span class="eyebrow">About</span>
-        <p class="about-lead">A senior engineer who turns ambiguous business problems into resilient, well-architected systems — owning the path from data model to deployment, and the team that ships it.</p>
-        <p class="about-sub">Five years building and leading across product teams — full-stack TypeScript, distributed services, and the pragmatic judgment to know which decisions are reversible and which are not.</p>
-      </div>
-      <div class="stats">
-        <div class="stat" data-reveal data-delay="0"><div class="num">5+</div><div class="lbl">Years experience</div></div>
-        <div class="stat" data-reveal data-delay="80"><div class="num">7</div><div class="lbl">Companies</div></div>
-        <div class="stat" data-reveal data-delay="160"><div class="num">20+</div><div class="lbl">Systems shipped</div></div>
-        <div class="stat" data-reveal data-delay="240"><div class="num">2+</div><div class="lbl">Years leading</div></div>
-      </div>
-    </div>
-  </section>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">View work <i class="ri-arrow-right-down-line"></i></a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
 
-  <!-- SERVICES -->
-  <section class="wrap pad-x">
-    <div class="sec-head" data-reveal style="margin-bottom:48px;">
-      <span class="eyebrow">Capabilities</span>
-    </div>
-    <div class="services">
-      <div class="service" data-reveal data-delay="0">
-        <div class="num">01</div>
-        <h3>System Architecture</h3>
-        <p>Designing data models, service boundaries, and deployment topology that stay maintainable as teams and load grow.</p>
-      </div>
-      <div class="service" data-reveal data-delay="80">
-        <div class="num">02</div>
-        <h3>Full-Stack Development</h3>
-        <p>End-to-end product delivery across Next.js, React, and NestJS — typed from the database to the UI.</p>
-      </div>
-      <div class="service" data-reveal data-delay="160">
-        <div class="num">03</div>
-        <h3>API &amp; Integrations</h3>
-        <p>Robust REST and queue-driven services with Prisma, Redis, and BullMQ for reliable background work.</p>
-      </div>
-      <div class="service" data-reveal data-delay="240">
-        <div class="num">04</div>
-        <h3>Tech Leadership</h3>
-        <p>Setting standards, reviewing for the long term, and mentoring engineers toward shared ownership.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="wrap pad-x">
-    <div class="sec-head proj-head" data-reveal>
-      <h2 class="sec-h2">Selected Work</h2>
-      <span class="count">06 Projects</span>
-    </div>
-    <div class="projects">
-      <a href="https://www.otteriwashdry.com/" target="_blank" rel="noopener" class="proj" data-reveal data-delay="0">
-        <div class="proj-media">
-          <div class="proj-bg" style="background:#1f262b;"><span class="proj-mono">OT</span></div>
-          <span class="proj-tech">Next.js</span>
-          <span class="proj-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1c1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
+          <div class="hero__social">
+            <a href="https://github.com/yocyber-code" target="_blank" rel="noopener" aria-label="GitHub"><i
+                class="ri-github-fill"></i></a>
+            <a href="https://www.linkedin.com/in/watchara-sueasakul-836573284/" target="_blank" rel="noopener"
+              aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+            <a href="mailto:yocyberyoshi@gmail.com" aria-label="Email"><i class="ri-mail-fill"></i></a>
+          </div>
         </div>
-        <div class="proj-info"><h3>Otteri Website</h3><span class="year">2025</span></div>
-        <p class="proj-desc">Corporate site for a laundry &amp; car-wash franchise — fast, SSG, bilingual.</p>
-      </a>
 
-      <a href="https://shop.otteri.app/" target="_blank" rel="noopener" class="proj" data-reveal data-delay="90">
-        <div class="proj-media">
-          <div class="proj-bg" style="background:#232024;"><span class="proj-mono">OS</span></div>
-          <span class="proj-tech">Nuxt</span>
-          <span class="proj-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1c1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
-        </div>
-        <div class="proj-info"><h3>Otteri Shop</h3><span class="year">2025</span></div>
-        <p class="proj-desc">E-commerce storefront with cart, checkout, and order management.</p>
-      </a>
-
-      <div class="proj" data-reveal data-delay="0">
-        <div class="proj-media">
-          <div class="proj-bg" style="background:#1d2329;"><span class="proj-mono">ID</span></div>
-          <span class="proj-tech">Angular</span>
-        </div>
-        <div class="proj-info"><h3>IDA — Integrated Doctor App</h3><span class="year">2024</span></div>
-        <p class="proj-desc">Physician scheduling &amp; patient communications for Phyathai Hospitals Group, with real-time SMS gateway.</p>
-      </div>
-
-      <a href="https://workplus.one/" target="_blank" rel="noopener" class="proj" data-reveal data-delay="90">
-        <div class="proj-media">
-          <div class="proj-bg" style="background:#26221d;"><span class="proj-mono">W+</span></div>
-          <span class="proj-tech">Angular</span>
-          <span class="proj-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a1c1e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
-        </div>
-        <div class="proj-info"><h3>Work+</h3><span class="year">2024</span></div>
-        <p class="proj-desc">Workforce platform for scheduling, attendance, and HR operations.</p>
-      </a>
-
-      <div class="proj" data-reveal data-delay="0">
-        <div class="proj-media">
-          <div class="proj-bg" style="background:#1e2226;"><span class="proj-mono">SG</span></div>
-          <span class="proj-tech">NestJS</span>
-        </div>
-        <div class="proj-info"><h3>Serious Gamer Platform</h3><span class="year">In progress</span></div>
-        <p class="proj-desc">Thailand-first SaaS for competitive gaming communities — modular monolith (NestJS · Next.js · PostgreSQL · Redis · BullMQ).</p>
-      </div>
-
-      <div class="proj" data-reveal data-delay="90">
-        <div class="proj-media">
-          <div class="proj-bg" style="background:#221f26;"><span class="proj-mono">AY</span></div>
-          <span class="proj-tech">Discord</span>
-        </div>
-        <div class="proj-info"><h3>Agent Yusha</h3><span class="year">In progress</span></div>
-        <p class="proj-desc">Discord-native companion bot with workflow automation, part of the Yusha automation ecosystem.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="wrap pad-x">
-    <div class="sec-head" data-reveal style="margin-bottom:24px;">
-      <h2 class="sec-h2">Experience</h2>
-    </div>
-    <div>
-      <div class="exp-row" data-reveal data-delay="0"><div class="exp-company">UC Connect</div><div class="exp-role">Development Lead</div><div class="exp-year">2026</div></div>
-      <div class="exp-row" data-reveal data-delay="60"><div class="exp-company">Codemonday</div><div class="exp-role">Senior Full Stack Developer</div><div class="exp-year">2024–25</div></div>
-      <div class="exp-row" data-reveal data-delay="120"><div class="exp-company">BYD — Rêver Automotive</div><div class="exp-role">Full Stack Developer</div><div class="exp-year">2024</div></div>
-      <div class="exp-row" data-reveal data-delay="180"><div class="exp-company">Indigy</div><div class="exp-role">Full Stack Developer</div><div class="exp-year">2023–24</div></div>
-      <div class="exp-row" data-reveal data-delay="240"><div class="exp-company">Priceza</div><div class="exp-role">Software Engineer</div><div class="exp-year">2022–23</div></div>
-      <div class="exp-row" data-reveal data-delay="300"><div class="exp-company">T-Dev</div><div class="exp-role">Front End Developer</div><div class="exp-year">2021–22</div></div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="wrap pad">
-      <h2 data-reveal>Let&rsquo;s build something that helps people</h2>
-      <div class="contact-cta" data-reveal data-delay="120">
-        <a href="mailto:watchara_su@knowlesscrew.co.th" class="btn-gold">
-          watchara_su@knowlesscrew.co.th
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-        </a>
-      </div>
-      <div class="contact-foot" data-reveal data-delay="180">
-        <span class="copy">© 2026 Watchara Sueasakul — Bangkok</span>
-        <div class="socials">
-          <a href="https://github.com/yocyber-code" target="_blank" rel="noopener">GitHub ↗ @yocyber-code</a>
-          <a href="https://www.linkedin.com/in/watchara-sueasakul-836573284/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <div class="hero__visual reveal">
+          <div class="hero__photo">
+            <img src="assets/img/extended-removebg-preview.png" alt="Watchara Sueasakul" />
+          </div>
+          <div class="hero__badge hero__badge--1"><i class="ri-terminal-box-line"></i> Next.js · NestJS</div>
+          <div class="hero__badge hero__badge--2"><i class="ri-cloud-line"></i> Azure · Docker</div>
         </div>
       </div>
+
+      <!-- stats -->
+      <div class="hero__stats container reveal">
+        <div class="stat"><span class="stat__num">5+</span><span class="stat__label">Years experience</span></div>
+        <div class="stat"><span class="stat__num">7</span><span class="stat__label">Companies shipped for</span></div>
+        <div class="stat"><span class="stat__num">20+</span><span class="stat__label">Production systems</span></div>
+        <div class="stat"><span class="stat__num">2+</span><span class="stat__label">Years leading teams</span></div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <p class="section__eyebrow">01 — About</p>
+        <h2 class="section__title">Bridging business and<br /><span class="grad">technical execution</span></h2>
+
+        <div class="about__grid">
+          <div class="about__card about__card--lead reveal">
+            <p>
+              Hi, I'm Yoshi. I build production-grade software and lead the teams that ship it.
+              My path runs from music composition to computer science — structural reasoning
+              and creative problem-solving carry straight into system design.
+            </p>
+            <p>
+              I'm equally comfortable directing cross-functional engineering and writing the code myself,
+              translating requirements into architecture with clarity and precision.
+            </p>
+          </div>
+
+          <div class="about__card reveal">
+            <i class="ri-stack-line about__icon"></i>
+            <h3>Architecture-first</h3>
+            <p>System design, API strategy, and data modeling before a line of feature code.</p>
+          </div>
+
+          <div class="about__card reveal">
+            <i class="ri-team-line about__icon"></i>
+            <h3>Team leadership</h3>
+            <p>Code review, release readiness, and mentoring across frontend, backend, and infra.</p>
+          </div>
+
+          <div class="about__card reveal">
+            <i class="ri-shield-check-line about__icon"></i>
+            <h3>Domains delivered</h3>
+            <p>Healthcare, retail, automotive, finance — secure data handling and payment integrations.</p>
+          </div>
+
+          <div class="about__card about__card--founder reveal">
+            <i class="ri-rocket-2-line about__icon"></i>
+            <h3>Co-Founder & Director — KCN Studio</h3>
+            <p>A software studio with four units: Software Engineering, IoT Solutions, Media Studio, and Music
+              Studio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <p class="section__eyebrow">02 — Skills</p>
+        <h2 class="section__title">The <span class="grad">stack</span> I build with</h2>
+
+        <div class="skills__grid">
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-star-line"></i> Primary stack</h3>
+            <div class="chips">
+              <span class="chip"><img src="assets/img/next-js.svg" alt="" />Next.js</span>
+              <span class="chip"><img src="assets/img/react-2.svg" alt="" />React</span>
+              <span class="chip"><img src="assets/img/nestjs.svg" alt="" />NestJS</span>
+              <span class="chip"><img src="assets/img/typescript.svg" alt="" />TypeScript</span>
+              <span class="chip"><img src="assets/img/postgresql.svg" alt="" />PostgreSQL</span>
+              <span class="chip"><i class="ri-database-2-line"></i>Prisma</span>
+              <span class="chip"><img src="assets/img/redis.svg" alt="" />Redis</span>
+              <span class="chip"><i class="ri-stack-line"></i>BullMQ</span>
+            </div>
+          </div>
+
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-pages-line"></i> Frontend</h3>
+            <div class="chips">
+              <span class="chip"><img src="assets/img/angular-icon-1.svg" alt="" />Angular</span>
+              <span class="chip"><img src="assets/img/vue-9.svg" alt="" />Vue.js</span>
+              <span class="chip"><img src="assets/img/nuxt-2.svg" alt="" />Nuxt</span>
+              <span class="chip"><img src="assets/img/tailwind-css-2.svg" alt="" />Tailwind</span>
+              <span class="chip"><img src="assets/img/bootstrap-5-1.svg" alt="" />Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-code-s-slash-line"></i> Backend</h3>
+            <div class="chips">
+              <span class="chip"><img src="assets/img/nodejs-1.svg" alt="" />Node.js</span>
+              <span class="chip"><img src="assets/img/net_core.svg" alt="" />.NET / C#</span>
+              <span class="chip"><img src="assets/img/python-5.svg" alt="" />Django</span>
+              <span class="chip"><img src="assets/img/go-8.svg" alt="" />Go</span>
+            </div>
+          </div>
+
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-braces-line"></i> Languages</h3>
+            <div class="chips">
+              <span class="chip"><img src="assets/img/typescript.svg" alt="" />TypeScript</span>
+              <span class="chip"><img src="assets/img/logo-javascript.svg" alt="" />JavaScript</span>
+              <span class="chip"><img src="assets/img/c--4.svg" alt="" />C#</span>
+              <span class="chip"><img src="assets/img/python-5.svg" alt="" />Python</span>
+              <span class="chip"><img src="assets/img/java-4.svg" alt="" />Java</span>
+              <span class="chip"><img src="assets/img/go-8.svg" alt="" />Go</span>
+            </div>
+          </div>
+
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-database-2-line"></i> Data</h3>
+            <div class="chips">
+              <span class="chip"><img src="assets/img/postgresql.svg" alt="" />PostgreSQL</span>
+              <span class="chip"><i class="ri-server-line"></i>SQL Server</span>
+              <span class="chip"><img src="assets/img/mysql-logo.svg" alt="" />MySQL</span>
+              <span class="chip"><img src="assets/img/mongodb-icon-1.svg" alt="" />MongoDB</span>
+              <span class="chip"><i class="ri-fire-line"></i>Firebase</span>
+            </div>
+          </div>
+
+          <div class="skills__group reveal">
+            <h3 class="skills__heading"><i class="ri-cloud-line"></i> Cloud & DevOps</h3>
+            <div class="chips">
+              <span class="chip"><i class="ri-microsoft-line"></i>Azure</span>
+              <span class="chip"><img src="assets/img/docker-4.svg" alt="" />Docker</span>
+              <span class="chip"><i class="ri-loop-right-line"></i>Azure DevOps</span>
+              <span class="chip"><i class="ri-git-merge-line"></i>CI/CD</span>
+              <span class="chip"><img src="assets/img/git-icon.svg" alt="" />Git</span>
+              <span class="chip"><img src="assets/img/swagger.svg" alt="" />Swagger</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <p class="section__eyebrow">03 — Experience</p>
+        <h2 class="section__title">Where I've <span class="grad">shipped</span></h2>
+
+        <div class="timeline">
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Jan 2026 – Apr 2026</span>
+              <h3 class="tl__role">Development Lead</h3>
+              <span class="tl__org">UC Connect Co., Ltd.</span>
+              <p class="tl__desc">Led end-to-end technical delivery across concurrent projects — architecture,
+                scope, and roadmaps. Directed code reviews, release readiness, and API/integration strategy;
+                mentored the team on patterns and code quality.</p>
+            </div>
+          </div>
+
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Nov 2024 – Apr 2025</span>
+              <h3 class="tl__role">Senior Full Stack Developer</h3>
+              <span class="tl__org">Codemonday Co., Ltd.</span>
+              <p class="tl__desc">Architected Betagro Farmer Manager (agricultural compensation payments,
+                validation, automated reporting). Led the BDMS Medical Records Request System as Team Lead —
+                digital request &amp; tracking with secure data handling and third-party integrations.</p>
+            </div>
+          </div>
+
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Jun 2024 – Oct 2024</span>
+              <h3 class="tl__role">Full Stack Developer</h3>
+              <span class="tl__org">BYD — Rêver Automotive Co., Ltd.</span>
+              <p class="tl__desc">Designed five internal office systems for staff and a national dealer network.
+                Built C# .NET APIs on Azure + SharePoint, Angular/React frontends, and Azure DevOps CI/CD pipelines.</p>
+            </div>
+          </div>
+
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Mar 2023 – May 2024</span>
+              <h3 class="tl__role">Full Stack Developer</h3>
+              <span class="tl__org">Indigy Co., Ltd.</span>
+              <p class="tl__desc">Built the PTT OR Thaideat marketplace with role-based multi-stakeholder workflows,
+                and Phyathai Hospital physician scheduling with real-time SMS gateway integration. Delivered ERP/CRM/HR
+                systems (BSale, TCP Work+, Syslink).</p>
+            </div>
+          </div>
+
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Dec 2022 – Feb 2023</span>
+              <h3 class="tl__role">Software Engineer</h3>
+              <span class="tl__org">Priceza Co., Ltd.</span>
+              <p class="tl__desc">Built the Roojai Insurance web app (React.js + NestJS) for product browsing and
+                policy management. Integrated SCB Payment Gateway with automated payment reconciliation.</p>
+            </div>
+          </div>
+
+          <div class="tl__item reveal">
+            <div class="tl__dot"></div>
+            <div class="tl__body">
+              <span class="tl__date">Jul 2021 – Nov 2022</span>
+              <h3 class="tl__role">Front End Developer</h3>
+              <span class="tl__org">T-Dev Co., Ltd.</span>
+              <p class="tl__desc">Built responsive interfaces for the Otteri merchandise store and car-wash platform
+                (Angular, Vue.js) with SCB payment flows; designed PostgreSQL schemas with the backend team.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- education -->
+        <div class="edu">
+          <h3 class="edu__heading"><i class="ri-graduation-cap-line"></i> Education</h3>
+          <div class="edu__grid">
+            <div class="edu__item reveal">
+              <img src="assets/img/dpu.jpg" alt="Dhurakij Pundit University" />
+              <div>
+                <h4>M.Sc. Artificial Intelligence &amp; Data Engineering</h4>
+                <span>Dhurakij Pundit University · Aug 2025 – Present</span>
+              </div>
+            </div>
+            <div class="edu__item reveal">
+              <img src="assets/img/sau.png" alt="Southeast Asia University" />
+              <div>
+                <h4>B.Sc. Computer Science</h4>
+                <span>Southeast Asia University · 2019 – 2024</span>
+              </div>
+            </div>
+            <div class="edu__item reveal">
+              <img src="assets/img/mahidol.svg" alt="Mahidol University" />
+              <div>
+                <h4>B.A. Music Composition</h4>
+                <span>College of Music, Mahidol University · 2015 – 2018</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <p class="section__eyebrow">04 — Projects</p>
+        <h2 class="section__title">Selected <span class="grad">work</span></h2>
+
+        <div class="projects__grid">
+          <article class="proj reveal">
+            <div class="proj__media"><img src="assets/img/otteri.png" alt="Otteri Website" /></div>
+            <div class="proj__body">
+              <h3 class="proj__title">Otteri Website</h3>
+              <p class="proj__desc">Laundry &amp; car-wash brand site with store locator and service booking.</p>
+              <div class="proj__tags"><span>Next.js</span><span>React</span></div>
+              <a href="https://www.otteriwashdry.com/" target="_blank" rel="noopener" class="proj__link">Visit <i
+                  class="ri-arrow-right-up-line"></i></a>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__media"><img src="assets/img/otteri-shop.png" alt="Otteri Shop" /></div>
+            <div class="proj__body">
+              <h3 class="proj__title">Otteri Shop</h3>
+              <p class="proj__desc">E-commerce storefront for merchandise with cart and payment flow.</p>
+              <div class="proj__tags"><span>Nuxt</span><span>Vue</span></div>
+              <a href="https://shop.otteri.app/" target="_blank" rel="noopener" class="proj__link">Visit <i
+                  class="ri-arrow-right-up-line"></i></a>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__media"><img src="assets/img/ida.png" alt="IDA Integrated Doctor App" /></div>
+            <div class="proj__body">
+              <h3 class="proj__title">IDA — Integrated Doctor App</h3>
+              <p class="proj__desc">Physician scheduling &amp; patient communications for Phyathai Hospitals Group.</p>
+              <div class="proj__tags"><span>Angular</span><span>SMS Gateway</span></div>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <div class="proj__media"><img src="assets/img/workplus.png" alt="Work+" /></div>
+            <div class="proj__body">
+              <h3 class="proj__title">Work+</h3>
+              <p class="proj__desc">Enterprise HR &amp; workforce platform with real-time dashboards.</p>
+              <div class="proj__tags"><span>Angular</span></div>
+              <a href="https://workplus.one/" target="_blank" rel="noopener" class="proj__link">Visit <i
+                  class="ri-arrow-right-up-line"></i></a>
+            </div>
+          </article>
+
+          <article class="proj proj--text reveal">
+            <div class="proj__body">
+              <span class="proj__badge">SaaS · In progress</span>
+              <h3 class="proj__title">Serious Gamer Operating Platform</h3>
+              <p class="proj__desc">Thailand-first SaaS for competitive gaming communities. Modular monolith
+                (NestJS · Next.js · PostgreSQL · Redis · BullMQ), PDPA-aware data classification, four-role RBAC,
+                preset-first schemas for MOBA/FPS/RPG.</p>
+              <div class="proj__tags"><span>NestJS</span><span>Next.js</span><span>PostgreSQL</span></div>
+            </div>
+          </article>
+
+          <article class="proj proj--text reveal">
+            <div class="proj__body">
+              <span class="proj__badge">Automation · In progress</span>
+              <h3 class="proj__title">Agent Yusha / Yusha Bud</h3>
+              <p class="proj__desc">Discord-native companion bot with workflow automation, part of the broader
+                Yusha automation ecosystem.</p>
+              <div class="proj__tags"><span>Node.js</span><span>Discord</span><span>Automation</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact section" id="contact">
+      <div class="container contact__inner reveal">
+        <p class="section__eyebrow">05 — Contact</p>
+        <h2 class="section__title">Let's build something<br /><span class="grad">that helps people</span></h2>
+        <p class="contact__desc">Open to leadership roles, architecture work, and serious collaborations.
+          The fastest way to reach me is email.</p>
+
+        <div class="contact__links">
+          <a href="mailto:yocyberyoshi@gmail.com" class="contact__card">
+            <i class="ri-mail-line"></i>
+            <span class="contact__k">Email</span>
+            <span class="contact__v">yocyberyoshi@gmail.com</span>
+          </a>
+          <a href="https://github.com/yocyber-code" target="_blank" rel="noopener" class="contact__card">
+            <i class="ri-github-line"></i>
+            <span class="contact__k">GitHub</span>
+            <span class="contact__v">@yocyber-code</span>
+          </a>
+          <a href="https://www.linkedin.com/in/watchara-sueasakul-836573284/" target="_blank" rel="noopener"
+            class="contact__card">
+            <i class="ri-linkedin-box-line"></i>
+            <span class="contact__k">LinkedIn</span>
+            <span class="contact__v">Watchara Sueasakul</span>
+          </a>
+          <div class="contact__card contact__card--static">
+            <i class="ri-map-pin-line"></i>
+            <span class="contact__k">Based in</span>
+            <span class="contact__v">Bangkok, Thailand</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#home" class="nav__logo"><span class="nav__logo-mark">&lt;/&gt;</span> Yoshi</a>
+        <p class="footer__tag">Full Stack Developer · Technical Lead</p>
+      </div>
+      <ul class="footer__nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+      <span class="footer__copy">© 2026 Watchara Sueasakul</span>
     </div>
-  </section>
+  </footer>
 
-  <script>
-    // scroll reveal with per-element delay
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (!e.isIntersecting) return;
-        e.target.style.transitionDelay = (e.target.dataset.delay || 0) + 'ms';
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-    const revealEls = document.querySelectorAll('[data-reveal]');
-    revealEls.forEach((el) => io.observe(el));
-    // safety: force-reveal anything still hidden after 2.5s
-    setTimeout(() => revealEls.forEach((el) => el.classList.add('in')), 2500);
+  <a href="#home" class="scrollup" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
 
-    // nav active-section underline
-    const navLinks = document.querySelectorAll('.navlink');
-    const ids = ['work', 'projects', 'experience', 'contact'];
-    const onScroll = () => {
-      let active = 'work';
-      for (const id of ids) {
-        const s = document.getElementById(id);
-        if (s && s.getBoundingClientRect().top <= 140) active = id;
-      }
-      navLinks.forEach((l) => l.classList.toggle('active', l.dataset.nav === active));
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
