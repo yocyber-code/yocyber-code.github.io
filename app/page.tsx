@@ -19,14 +19,14 @@ export default function Home() {
               <li><a href="#projects" className="nav__link">Projects</a></li>
               <li><a href="#contact" className="nav__link">Contact</a></li>
             </ul>
-            <div className="nav__close" id="nav-close"><i className="ri-close-line"></i></div>
+            <button className="nav__close" id="nav-close" aria-label="Close menu"><i className="ri-close-line"></i></button>
           </div>
 
           <div className="nav__actions">
             <button className="nav__theme" id="theme-button" aria-label="Toggle theme">
               <i className="ri-moon-line"></i>
             </button>
-            <div className="nav__toggle" id="nav-toggle"><i className="ri-menu-4-line"></i></div>
+            <button className="nav__toggle" id="nav-toggle" aria-label="Open menu"><i className="ri-menu-4-line"></i></button>
           </div>
         </nav>
       </header>
