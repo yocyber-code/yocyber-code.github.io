@@ -1,0 +1,4 @@
+# sharp is pulled transitively by Next but unused (images.unoptimized).
+# Don't run its build script — keeps install/build from gating on it.
+allowBuilds:
+  sharp: false

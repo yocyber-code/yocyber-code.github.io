@@ -1,0 +1,437 @@
+import Enhancements from './components/Enhancements'
+
+export default function Home() {
+  return (
+    <>
+      {/* ===== HEADER ===== */}
+      <header className="header" id="header">
+        <nav className="nav container">
+          <a href="#home" className="nav__logo">
+            <span className="nav__logo-mark">&lt;/&gt;</span> Yoshi
+          </a>
+
+          <div className="nav__menu" id="nav-menu">
+            <ul className="nav__list">
+              <li><a href="#home" className="nav__link active-link">Home</a></li>
+              <li><a href="#about" className="nav__link">About</a></li>
+              <li><a href="#skills" className="nav__link">Skills</a></li>
+              <li><a href="#experience" className="nav__link">Experience</a></li>
+              <li><a href="#projects" className="nav__link">Projects</a></li>
+              <li><a href="#contact" className="nav__link">Contact</a></li>
+            </ul>
+            <div className="nav__close" id="nav-close"><i className="ri-close-line"></i></div>
+          </div>
+
+          <div className="nav__actions">
+            <button className="nav__theme" id="theme-button" aria-label="Toggle theme">
+              <i className="ri-moon-line"></i>
+            </button>
+            <div className="nav__toggle" id="nav-toggle"><i className="ri-menu-4-line"></i></div>
+          </div>
+        </nav>
+      </header>
+
+      <main className="main">
+        {/* ===== HERO ===== */}
+        <section className="hero section" id="home">
+          <div className="hero__container container">
+            <div className="hero__data reveal">
+              <p className="hero__greeting"><span className="hero__status"></span> Available for select work</p>
+              <h1 className="hero__title">
+                Watchara <span className="grad">Sueasakul</span>
+              </h1>
+              <p className="hero__role">Full Stack Developer · Technical Lead</p>
+              <p className="hero__desc">
+                Technical leader with 5+ years of full-stack development and 2+ years leading teams.
+                I architect enterprise web systems end-to-end — frontend, backend, and cloud —
+                for clients in healthcare, retail, automotive, and finance.
+              </p>
+
+              <div className="hero__cta">
+                <a href="#projects" className="btn btn--primary">View work <i className="ri-arrow-right-down-line"></i></a>
+                <a href="#contact" className="btn btn--ghost">Get in touch</a>
+              </div>
+
+              <div className="hero__social">
+                <a href="https://github.com/yocyber-code" target="_blank" rel="noopener" aria-label="GitHub"><i className="ri-github-fill"></i></a>
+                <a href="https://www.linkedin.com/in/watchara-sueasakul-836573284/" target="_blank" rel="noopener" aria-label="LinkedIn"><i className="ri-linkedin-box-fill"></i></a>
+                <a href="mailto:yocyberyoshi@gmail.com" aria-label="Email"><i className="ri-mail-fill"></i></a>
+              </div>
+            </div>
+
+            <div className="hero__visual reveal">
+              <div className="hero__photo">
+                <img src="/assets/img/extended-removebg-preview.png" alt="Watchara Sueasakul" />
+              </div>
+              <div className="hero__badge hero__badge--1"><i className="ri-terminal-box-line"></i> Next.js · NestJS</div>
+              <div className="hero__badge hero__badge--2"><i className="ri-cloud-line"></i> Azure · Docker</div>
+            </div>
+          </div>
+
+          <div className="hero__stats container reveal">
+            <div className="stat"><span className="stat__num">5+</span><span className="stat__label">Years experience</span></div>
+            <div className="stat"><span className="stat__num">7</span><span className="stat__label">Companies shipped for</span></div>
+            <div className="stat"><span className="stat__num">20+</span><span className="stat__label">Production systems</span></div>
+            <div className="stat"><span className="stat__num">2+</span><span className="stat__label">Years leading teams</span></div>
+          </div>
+        </section>
+
+        {/* ===== ABOUT ===== */}
+        <section className="about section" id="about">
+          <div className="container">
+            <p className="section__eyebrow">01 — About</p>
+            <h2 className="section__title">Bridging business and<br /><span className="grad">technical execution</span></h2>
+
+            <div className="about__grid">
+              <div className="about__card about__card--lead reveal">
+                <p>
+                  Hi, I&apos;m Yoshi. I build production-grade software and lead the teams that ship it.
+                  My path runs from music composition to computer science — structural reasoning
+                  and creative problem-solving carry straight into system design.
+                </p>
+                <p>
+                  I&apos;m equally comfortable directing cross-functional engineering and writing the code myself,
+                  translating requirements into architecture with clarity and precision.
+                </p>
+              </div>
+
+              <div className="about__card reveal">
+                <i className="ri-stack-line about__icon"></i>
+                <h3>Architecture-first</h3>
+                <p>System design, API strategy, and data modeling before a line of feature code.</p>
+              </div>
+
+              <div className="about__card reveal">
+                <i className="ri-team-line about__icon"></i>
+                <h3>Team leadership</h3>
+                <p>Code review, release readiness, and mentoring across frontend, backend, and infra.</p>
+              </div>
+
+              <div className="about__card reveal">
+                <i className="ri-shield-check-line about__icon"></i>
+                <h3>Domains delivered</h3>
+                <p>Healthcare, retail, automotive, finance — secure data handling and payment integrations.</p>
+              </div>
+
+              <div className="about__card about__card--founder reveal">
+                <i className="ri-rocket-2-line about__icon"></i>
+                <h3>Co-Founder &amp; Director — KCN Studio</h3>
+                <p>A software studio with four units: Software Engineering, IoT Solutions, Media Studio, and Music Studio.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== SKILLS ===== */}
+        <section className="skills section" id="skills">
+          <div className="container">
+            <p className="section__eyebrow">02 — Skills</p>
+            <h2 className="section__title">The <span className="grad">stack</span> I build with</h2>
+
+            <div className="skills__grid">
+              <div className="skills__group reveal">
+                <h3 className="skills__heading"><i className="ri-star-line"></i> Primary stack</h3>
+                <div className="chips">
+                  <span className="chip"><img src="/assets/img/next-js.svg" alt="" />Next.js</span>
+                  <span className="chip"><img src="/assets/img/react-2.svg" alt="" />React</span>
+                  <span className="chip"><img src="/assets/img/nestjs.svg" alt="" />NestJS</span>
+                  <span className="chip"><img src="/assets/img/typescript.svg" alt="" />TypeScript</span>
+                  <span className="chip"><img src="/assets/img/postgresql.svg" alt="" />PostgreSQL</span>
+                  <span className="chip"><i className="ri-database-2-line"></i>Prisma</span>
+                  <span className="chip"><img src="/assets/img/redis.svg" alt="" />Redis</span>
+                  <span className="chip"><i className="ri-stack-line"></i>BullMQ</span>
+                </div>
+              </div>
+
+              <div className="skills__group reveal">
+                <h3 className="skills__heading"><i className="ri-pages-line"></i> Frontend</h3>
+                <div className="chips">
+                  <span className="chip"><img src="/assets/img/angular-icon-1.svg" alt="" />Angular</span>
+                  <span className="chip"><img src="/assets/img/vue-9.svg" alt="" />Vue.js</span>
+                  <span className="chip"><img src="/assets/img/nuxt-2.svg" alt="" />Nuxt</span>
+                  <span className="chip"><img src="/assets/img/tailwind-css-2.svg" alt="" />Tailwind</span>
+                  <span className="chip"><img src="/assets/img/bootstrap-5-1.svg" alt="" />Bootstrap</span>
+                </div>
+              </div>
+
+              <div className="skills__group reveal">
+                <h3 className="skills__heading"><i className="ri-code-s-slash-line"></i> Backend</h3>
+                <div className="chips">
+                  <span className="chip"><img src="/assets/img/nodejs-1.svg" alt="" />Node.js</span>
+                  <span className="chip"><img src="/assets/img/net_core.svg" alt="" />.NET / C#</span>
+                  <span className="chip"><img src="/assets/img/python-5.svg" alt="" />Django</span>
+                  <span className="chip"><img src="/assets/img/go-8.svg" alt="" />Go</span>
+                </div>
+              </div>
+
+              <div className="skills__group reveal">
+                <h3 className="skills__heading"><i className="ri-braces-line"></i> Languages</h3>
+                <div className="chips">
+                  <span className="chip"><img src="/assets/img/typescript.svg" alt="" />TypeScript</span>
+                  <span className="chip"><img src="/assets/img/logo-javascript.svg" alt="" />JavaScript</span>
+                  <span className="chip"><img src="/assets/img/c--4.svg" alt="" />C#</span>
+                  <span className="chip"><img src="/assets/img/python-5.svg" alt="" />Python</span>
+                  <span className="chip"><img src="/assets/img/java-4.svg" alt="" />Java</span>
+                  <span className="chip"><img src="/assets/img/go-8.svg" alt="" />Go</span>
+                </div>
+              </div>
+
+              <div className="skills__group reveal">
+                <h3 className="skills__heading"><i className="ri-database-2-line"></i> Data</h3>
+                <div className="chips">
+                  <span className="chip"><img src="/assets/img/postgresql.svg" alt="" />PostgreSQL</span>
+                  <span className="chip"><i className="ri-server-line"></i>SQL Server</span>
+                  <span className="chip"><img src="/assets/img/mysql-logo.svg" alt="" />MySQL</span>
+                  <span className="chip"><img src="/assets/img/mongodb-icon-1.svg" alt="" />MongoDB</span>
+                  <span className="chip"><i className="ri-fire-line"></i>Firebase</span>
+                </div>
+              </div>
+
+              <div className="skills__group reveal">
+                <h3 className="skills__heading"><i className="ri-cloud-line"></i> Cloud &amp; DevOps</h3>
+                <div className="chips">
+                  <span className="chip"><i className="ri-microsoft-line"></i>Azure</span>
+                  <span className="chip"><img src="/assets/img/docker-4.svg" alt="" />Docker</span>
+                  <span className="chip"><i className="ri-loop-right-line"></i>Azure DevOps</span>
+                  <span className="chip"><i className="ri-git-merge-line"></i>CI/CD</span>
+                  <span className="chip"><img src="/assets/img/git-icon.svg" alt="" />Git</span>
+                  <span className="chip"><img src="/assets/img/swagger.svg" alt="" />Swagger</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== EXPERIENCE ===== */}
+        <section className="experience section" id="experience">
+          <div className="container">
+            <p className="section__eyebrow">03 — Experience</p>
+            <h2 className="section__title">Where I&apos;ve <span className="grad">shipped</span></h2>
+
+            <div className="timeline">
+              <div className="tl__item reveal">
+                <div className="tl__dot"></div>
+                <div className="tl__body">
+                  <span className="tl__date">Jan 2026 – Apr 2026</span>
+                  <h3 className="tl__role">Development Lead</h3>
+                  <span className="tl__org">UC Connect Co., Ltd.</span>
+                  <p className="tl__desc">Led end-to-end technical delivery across concurrent projects — architecture,
+                    scope, and roadmaps. Directed code reviews, release readiness, and API/integration strategy;
+                    mentored the team on patterns and code quality.</p>
+                </div>
+              </div>
+
+              <div className="tl__item reveal">
+                <div className="tl__dot"></div>
+                <div className="tl__body">
+                  <span className="tl__date">Nov 2024 – Apr 2025</span>
+                  <h3 className="tl__role">Senior Full Stack Developer</h3>
+                  <span className="tl__org">Codemonday Co., Ltd.</span>
+                  <p className="tl__desc">Architected Betagro Farmer Manager (agricultural compensation payments,
+                    validation, automated reporting). Led the BDMS Medical Records Request System as Team Lead —
+                    digital request &amp; tracking with secure data handling and third-party integrations.</p>
+                </div>
+              </div>
+
+              <div className="tl__item reveal">
+                <div className="tl__dot"></div>
+                <div className="tl__body">
+                  <span className="tl__date">Jun 2024 – Oct 2024</span>
+                  <h3 className="tl__role">Full Stack Developer</h3>
+                  <span className="tl__org">BYD — Rêver Automotive Co., Ltd.</span>
+                  <p className="tl__desc">Designed five internal office systems for staff and a national dealer network.
+                    Built C# .NET APIs on Azure + SharePoint, Angular/React frontends, and Azure DevOps CI/CD pipelines.</p>
+                </div>
+              </div>
+
+              <div className="tl__item reveal">
+                <div className="tl__dot"></div>
+                <div className="tl__body">
+                  <span className="tl__date">Mar 2023 – May 2024</span>
+                  <h3 className="tl__role">Full Stack Developer</h3>
+                  <span className="tl__org">Indigy Co., Ltd.</span>
+                  <p className="tl__desc">Built the PTT OR Thaideat marketplace with role-based multi-stakeholder workflows,
+                    and Phyathai Hospital physician scheduling with real-time SMS gateway integration. Delivered ERP/CRM/HR
+                    systems (BSale, TCP Work+, Syslink).</p>
+                </div>
+              </div>
+
+              <div className="tl__item reveal">
+                <div className="tl__dot"></div>
+                <div className="tl__body">
+                  <span className="tl__date">Dec 2022 – Feb 2023</span>
+                  <h3 className="tl__role">Software Engineer</h3>
+                  <span className="tl__org">Priceza Co., Ltd.</span>
+                  <p className="tl__desc">Built the Roojai Insurance web app (React.js + NestJS) for product browsing and
+                    policy management. Integrated SCB Payment Gateway with automated payment reconciliation.</p>
+                </div>
+              </div>
+
+              <div className="tl__item reveal">
+                <div className="tl__dot"></div>
+                <div className="tl__body">
+                  <span className="tl__date">Jul 2021 – Nov 2022</span>
+                  <h3 className="tl__role">Front End Developer</h3>
+                  <span className="tl__org">T-Dev Co., Ltd.</span>
+                  <p className="tl__desc">Built responsive interfaces for the Otteri merchandise store and car-wash platform
+                    (Angular, Vue.js) with SCB payment flows; designed PostgreSQL schemas with the backend team.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="edu">
+              <h3 className="edu__heading"><i className="ri-graduation-cap-line"></i> Education</h3>
+              <div className="edu__grid">
+                <div className="edu__item reveal">
+                  <img src="/assets/img/dpu.jpg" alt="Dhurakij Pundit University" />
+                  <div>
+                    <h4>M.Sc. Artificial Intelligence &amp; Data Engineering</h4>
+                    <span>Dhurakij Pundit University · Aug 2025 – Present</span>
+                  </div>
+                </div>
+                <div className="edu__item reveal">
+                  <img src="/assets/img/sau.png" alt="Southeast Asia University" />
+                  <div>
+                    <h4>B.Sc. Computer Science</h4>
+                    <span>Southeast Asia University · 2019 – 2024</span>
+                  </div>
+                </div>
+                <div className="edu__item reveal">
+                  <img src="/assets/img/mahidol.svg" alt="Mahidol University" />
+                  <div>
+                    <h4>B.A. Music Composition</h4>
+                    <span>College of Music, Mahidol University · 2015 – 2018</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== PROJECTS ===== */}
+        <section className="projects section" id="projects">
+          <div className="container">
+            <p className="section__eyebrow">04 — Projects</p>
+            <h2 className="section__title">Selected <span className="grad">work</span></h2>
+
+            <div className="projects__grid">
+              <article className="proj reveal">
+                <div className="proj__media"><img src="/assets/img/otteri.png" alt="Otteri Website" /></div>
+                <div className="proj__body">
+                  <h3 className="proj__title">Otteri Website</h3>
+                  <p className="proj__desc">Laundry &amp; car-wash brand site with store locator and service booking.</p>
+                  <div className="proj__tags"><span>Next.js</span><span>React</span></div>
+                  <a href="https://www.otteriwashdry.com/" target="_blank" rel="noopener" className="proj__link">Visit <i className="ri-arrow-right-up-line"></i></a>
+                </div>
+              </article>
+
+              <article className="proj reveal">
+                <div className="proj__media"><img src="/assets/img/otteri-shop.png" alt="Otteri Shop" /></div>
+                <div className="proj__body">
+                  <h3 className="proj__title">Otteri Shop</h3>
+                  <p className="proj__desc">E-commerce storefront for merchandise with cart and payment flow.</p>
+                  <div className="proj__tags"><span>Nuxt</span><span>Vue</span></div>
+                  <a href="https://shop.otteri.app/" target="_blank" rel="noopener" className="proj__link">Visit <i className="ri-arrow-right-up-line"></i></a>
+                </div>
+              </article>
+
+              <article className="proj reveal">
+                <div className="proj__media"><img src="/assets/img/ida.png" alt="IDA Integrated Doctor App" /></div>
+                <div className="proj__body">
+                  <h3 className="proj__title">IDA — Integrated Doctor App</h3>
+                  <p className="proj__desc">Physician scheduling &amp; patient communications for Phyathai Hospitals Group.</p>
+                  <div className="proj__tags"><span>Angular</span><span>SMS Gateway</span></div>
+                </div>
+              </article>
+
+              <article className="proj reveal">
+                <div className="proj__media"><img src="/assets/img/workplus.png" alt="Work+" /></div>
+                <div className="proj__body">
+                  <h3 className="proj__title">Work+</h3>
+                  <p className="proj__desc">Enterprise HR &amp; workforce platform with real-time dashboards.</p>
+                  <div className="proj__tags"><span>Angular</span></div>
+                  <a href="https://workplus.one/" target="_blank" rel="noopener" className="proj__link">Visit <i className="ri-arrow-right-up-line"></i></a>
+                </div>
+              </article>
+
+              <article className="proj proj--text reveal">
+                <div className="proj__body">
+                  <span className="proj__badge">SaaS · In progress</span>
+                  <h3 className="proj__title">Serious Gamer Operating Platform</h3>
+                  <p className="proj__desc">Thailand-first SaaS for competitive gaming communities. Modular monolith
+                    (NestJS · Next.js · PostgreSQL · Redis · BullMQ), PDPA-aware data classification, four-role RBAC,
+                    preset-first schemas for MOBA/FPS/RPG.</p>
+                  <div className="proj__tags"><span>NestJS</span><span>Next.js</span><span>PostgreSQL</span></div>
+                </div>
+              </article>
+
+              <article className="proj proj--text reveal">
+                <div className="proj__body">
+                  <span className="proj__badge">Automation · In progress</span>
+                  <h3 className="proj__title">Agent Yusha / Yusha Bud</h3>
+                  <p className="proj__desc">Discord-native companion bot with workflow automation, part of the broader
+                    Yusha automation ecosystem.</p>
+                  <div className="proj__tags"><span>Node.js</span><span>Discord</span><span>Automation</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== CONTACT ===== */}
+        <section className="contact section" id="contact">
+          <div className="container contact__inner reveal">
+            <p className="section__eyebrow">05 — Contact</p>
+            <h2 className="section__title">Let&apos;s build something<br /><span className="grad">that helps people</span></h2>
+            <p className="contact__desc">Open to leadership roles, architecture work, and serious collaborations.
+              The fastest way to reach me is email.</p>
+
+            <div className="contact__links">
+              <a href="mailto:yocyberyoshi@gmail.com" className="contact__card">
+                <i className="ri-mail-line"></i>
+                <span className="contact__k">Email</span>
+                <span className="contact__v">yocyberyoshi@gmail.com</span>
+              </a>
+              <a href="https://github.com/yocyber-code" target="_blank" rel="noopener" className="contact__card">
+                <i className="ri-github-line"></i>
+                <span className="contact__k">GitHub</span>
+                <span className="contact__v">@yocyber-code</span>
+              </a>
+              <a href="https://www.linkedin.com/in/watchara-sueasakul-836573284/" target="_blank" rel="noopener" className="contact__card">
+                <i className="ri-linkedin-box-line"></i>
+                <span className="contact__k">LinkedIn</span>
+                <span className="contact__v">Watchara Sueasakul</span>
+              </a>
+              <div className="contact__card contact__card--static">
+                <i className="ri-map-pin-line"></i>
+                <span className="contact__k">Based in</span>
+                <span className="contact__v">Bangkok, Thailand</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* ===== FOOTER ===== */}
+      <footer className="footer">
+        <div className="container footer__inner">
+          <div>
+            <a href="#home" className="nav__logo"><span className="nav__logo-mark">&lt;/&gt;</span> Yoshi</a>
+            <p className="footer__tag">Full Stack Developer · Technical Lead</p>
+          </div>
+          <ul className="footer__nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+          <span className="footer__copy">© 2026 Watchara Sueasakul</span>
+        </div>
+      </footer>
+
+      <a href="#home" className="scrollup" id="scroll-up"><i className="ri-arrow-up-line"></i></a>
+
+      <Enhancements />
+    </>
+  )
+}
